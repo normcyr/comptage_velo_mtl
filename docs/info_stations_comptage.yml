@@ -1,0 +1,27 @@
+url_base
+  http://www.eco-public.com/api/cw6Xk4jW4X4R/data/periode/
+
+station
+  100003041 # Côte Sainte-Catherine, entre Stuart et McEachran (11)
+  100012218 # Boyer, entre Rosemont et des Carrières (7)
+  100025474 # St-Laurent, coin Bellechasse (1)
+  100003034 # Rachel, coin Papineau (2)
+  100003032 # Berri, devant BAnQ (3)
+  100004575 # Brébeuf, entre Rachel et Marie-Anne (4)
+
+step
+  1 # pas utilisé
+  2 # chaque 15 minutes
+  3 # chaque heure
+  4 # chaque jour
+  5 # chaque semaine
+  6 # chaque mois
+  7 # chaque année
+
+begin
+  20181101 # date début données
+end
+  20181115 # date fin données
+
+exemple_url
+  http://www.eco-public.com/api/cw6Xk4jW4X4R/data/periode/100025474?begin=20171101&end=20181115&step=4
