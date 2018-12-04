@@ -19,7 +19,7 @@ def make_comptage_df(comptage_filename):
 
     with open(comptage_filename, 'r') as datafile:
         json_comptage_data = json.load(datafile)
-        
+
     comptage_df = pd.DataFrame(json_comptage_data, columns = ['date', 'comptage'])
     comptage_df['date'] = pd.to_datetime(comptage_df['date'])
     comptage_df.index = comptage_df['date']
@@ -37,13 +37,13 @@ def make_weather_df(weather_filename):
         weather_df = pd.read_csv(datafile, sep = ',', usecols=['date', 'avg_temperature'])
 
     weather_df['date'] = pd.to_datetime(weather_df['date'])
-    
+
     weather_df.index = weather_df['date']
     del weather_df['date']
     #weather_df.sort_values(by = ['avg_temperature'])
 
-    
-        
+
+
     return(weather_df)
 
 
@@ -79,7 +79,7 @@ ax1.plot(merge_df['avg_temperature'], 'blue')
 ax1.set_ylabel('avg_temperature', color = 'blue')
 for tl in ax1.get_yticklabels():
     tl.set_color('blue')
-    
+
 ax2 = ax1.twinx()
 ax2.plot(merge_df['comptage'], 'red')
 ax2.set_ylabel('comptage', color = 'red')
@@ -91,4 +91,3 @@ for tl in ax2.get_yticklabels():
 
 
 merge_df.plot.scatter(x = 'avg_temperature', y = 'comptage')
-
